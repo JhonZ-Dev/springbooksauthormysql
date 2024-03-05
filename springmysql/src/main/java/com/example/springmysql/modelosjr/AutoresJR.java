@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "autoresjr")
@@ -17,7 +18,7 @@ public class AutoresJR {
     private LocalDate anionacimientojr;
     private String nombrejr;
 
-    //relacion de uno a muchos
+    //relacion de uno a muchos con libros
     @OneToMany(mappedBy = "id_autor", cascade = CascadeType.ALL)
-    private LibroJR libroJR;
+    private List<LibroJR> libros;
 }

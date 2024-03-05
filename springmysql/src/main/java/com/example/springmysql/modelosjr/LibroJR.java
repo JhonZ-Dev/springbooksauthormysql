@@ -18,7 +18,9 @@ public class LibroJR {
     @CreationTimestamp
     private LocalDate fechapublicacionjr;
     private String titulo;
+    @ManyToOne
+    @JoinColumn(name = "id_autor") // Nombre de la columna que almacena la clave externa
+    private AutoresJR id_autor;
 
-    //relacionar con autores
 
 }
