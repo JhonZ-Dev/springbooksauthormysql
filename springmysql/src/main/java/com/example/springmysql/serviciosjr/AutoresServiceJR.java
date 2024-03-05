@@ -32,4 +32,18 @@ public class AutoresServiceJR {
     public void eliminar(Long id_autorjr){
         repoJR.deleteById(id_autorjr);
     }
+    //metodo para editar
+    public AutoresJR editar (AutoresJR autoresJR, Long id_autorjr){
+        Optional<AutoresJR> existe = encontrarPorId(id_autorjr);
+        if(existe.isPresent()){
+            //procedo con la actualizacino
+            AutoresJR autoresJRExistente = existe.get();
+            autoresJRExistente.setAniojr(autoresJR.getAniojr());
+            autoresJRExistente.setAnionacimientojr(autoresJR.getAnionacimientojr());
+            autoresJRExistente.setNombrejr(autoresJR.getNombrejr());
+            return repoJR.save(autoresJRExistente);
+        }else{
+            throw new IllegalArgumentException("El autor con el ID proporcionado no existe");
+        }
+    }
 }
