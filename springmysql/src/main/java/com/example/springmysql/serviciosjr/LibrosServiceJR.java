@@ -13,9 +13,7 @@ public class LibrosServiceJR {
     private LibrosRepoJr librosRepoJr;
 
     //metodo para guardar
-    public LibroJR guardarlibros(LibroJR libroJR, AutoresJR id_autor){
-        //relacion
-        libroJR.setId_autor(id_autor);
+    public LibroJR guardarlibros(LibroJR libroJR){
         return librosRepoJr.save(libroJR);
     }
 }

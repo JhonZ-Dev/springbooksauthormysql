@@ -46,4 +46,13 @@ public class AutoresServiceJR {
             throw new IllegalArgumentException("El autor con el ID proporcionado no existe");
         }
     }
+
+    // En tu servicio AutoresServiceJR
+
+    public List<AutoresJR> listarPorFechaNacimiento(int inicio, int fin) {
+        return repoJR.findByAnioNacimientoBetween(inicio, fin);
+    }
+
+
+
 }
