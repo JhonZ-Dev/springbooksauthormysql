@@ -15,7 +15,6 @@ public class LibroJR {
     private Long id_librojr;
     private String isbnjr;
     private int numerospagjr;
-    @CreationTimestamp
     private LocalDate fechapublicacionjr;
     private String titulo;
     @ManyToOne

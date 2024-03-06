@@ -41,6 +41,16 @@ public class AutoresControJR {
         return autoresRepoJR.findByAniojrBefore(anioLimite);
     }
 
+    @GetMapping("/autoresconlibros")
+    public List<AutoresJR> listarAutoresConLibrosAB() {
+        return autoresRepoJR.findByLibrosTituloContaining("AB");
+    }
+/*    @GetMapping("/autoresMenor50yMenos300Paginas")
+    public List<AutoresJR> listarAutoresMenor50yMenos300Paginas() {
+        int edadLimite = 50;
+        int paginasLimite = 300;
+        return autoresRepoJR.findByEdadLessThanAndNumeroPaginasLessThan(edadLimite, paginasLimite);
+    }*/
 
 
 }

@@ -17,4 +17,9 @@ public interface AutoresRepoJR extends JpaRepository<AutoresJR, Long> {
     List<AutoresJR> findByAniojrBefore(int aniojr);
 
 
+    @Query("SELECT DISTINCT a FROM AutoresJR a JOIN FETCH a.libros l WHERE l.titulo LIKE %:keyword%")
+    List<AutoresJR> findByLibrosTituloContaining(String keyword);
+
+    //List<AutoresJR> findByAnionacimientojrLessThanAndLibros_(int edad, int numeroPaginas);
+
 }

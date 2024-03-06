@@ -1,0 +1,31 @@
+Enviar libro
+localhost:8081/api/librosjr/guardarjr
+{
+    "isbnjr": "123456789",
+    "numerospagjr": 200,
+    "fechapublicacionjr": "2024-03-05",
+    "titulo": "Mi libro",
+    "id_autor": {
+        "id_autorjr": 1,
+        "aniojr":25,
+        "anionacimientojr":"2000-02-15",
+        "nombrejr":"Pablo Neruda"
+    }
+}
+
+//enviar autor
+localhost:8081/api/guardar
+{
+    "aniojr":35,
+    "anionacimientojr":"1980-02-15",
+    "nombrejr":"Pablo Neruda"
+}
+
+//consultas
+Consultar todos los autores con edad mayor a 25 (método JPA) (1 pto)
+localhost:8081/api/autoresEdadMayorA25
+• Consultar los autores con año de nacimiento entre 1985 hasta 2000. (SQL) (1pto)
+localhost:8081/api/listarPorFechaNacimiento/2000/2000
+• Consultar los autores con libros que contengan AB (JPQL) (1 pto)
+localhost:8081/api/autoresconlibros
+• Consultar los autores de edad menor a 50 y menos de 300 páginas (método JPA) (1pto)
